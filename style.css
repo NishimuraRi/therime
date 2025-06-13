@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 8px solid white;
+}
+
+.circle.hot {
+  background-color: #800000; /* Dark red */
+}
+
+.circle.ice {
+  background-color: #000080; /* Dark blue */
+}
+
+.circle .en {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.circle .jp {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.circle:active, .circle.clicked {
+  box-shadow: 0 0 40px 10px #fff, 0 0 0 0 #fff;
+  filter: brightness(1.5);
+  transition: box-shadow 0.2s, filter 0.2s;
+}
