@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regular / Large</title>
+  <link rel="stylesheet" href="3.css">
+</head>
+<body>
+  <div class="container">
+    <div class="circle regular" onclick="glowAndGo(this, '../4.html')" style="cursor:pointer;">
+      <svg class="glass" viewBox="0 0 200 200" width="240" height="200">
+        <!-- 外側の円枠線のみ -->
+        <polygon points="60,110 140,90 130,170 70,170" fill="#2a1c11" />
+        <polyline points="60,50 140,50 130,170 70,170 60,50" fill="none" stroke="white" stroke-width="6" />
+      </svg>
+      <div class="label">
+        <span class="en">Regular</span><br>
+        <span class="jp">普通</span>
+      </div>
+    </div>
+    <div class="circle large" onclick="glowAndGo(this, '../4.html')" style="cursor:pointer;">
+      <svg class="glass" viewBox="0 0 200 200" width="240" height="200">
+        <!-- 外側の円枠線のみ -->
+        <polygon points="60,110 140,90 140,180 60,180" fill="#2a1c11" />
+        <polyline points="50,40 150,40 140,180 60,180 50,40" fill="none" stroke="white" stroke-width="6" />
+      </svg>
+      <div class="label">
+        <span class="en">Large</span><br>
+        <span class="jp">大きい</span>
+      </div>
+    </div>
+  </div>  <script>
+    function glowAndGo(element, url) {
+      element.classList.add('clicked');
+      setTimeout(function() {
+        location.href = url;
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
